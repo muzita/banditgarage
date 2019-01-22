@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css" type="text/css">
+  
+  <title>Document</title>
+</head>
+<body>
+
+  <!-- NAVIGATION BAR-->
+  <div class="menu_holder">
+    <ul>
+        <img src="logo_inv.jpg" class="logo_bar"></li>
+        <li class="classAux"> <a href="home.html">HOME</a></li>
+        <li> <a href="garage.html">GARAGE</a></li>
+        <li> <a href="#products">PRODUCTS</a></li>
+        <li> <a href="motorcycles.html">MOTORCYCLES</a></li>
+        <li> <a href="#banditbikers">BANDIT BIKERS</a></li>
+        <li> <a href="#blog">BLOG</a></li>
+        <li> <a href="#contact">CONTACT</a></li>
+      </ul>
+  </div>
+
+<!-- SLIDESHOW -->
+  <div class="slideshow-container">      
+    <div class="mySlides fade">
+      <img src="1.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+        <img src="2.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+        <img src="3.jpg" style="width:100%">
+    </div>
+    <div style="text-align:center">
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+          </div>
+
+<!-- IMG CONTAINERS-->
+  <div class="container">
+      <img src="bike1.jpg" class="container_img">
+      <div class="button">
+        <a href="garage.html">GARAGE</a></div>
+    </div>
+    
+  <div class="container">
+      <img src="bike2.jpg" class="container_img">
+      <div class="button2">
+        <a href="products.html">PRODUCTS</a></div>
+    </div>
+  
+<div class="container">
+  <img src="bike3.jpg" class="container_img">
+  <div class="button3">
+    <a href="motorcycles.html">MOTORCYCLES</a></div>
+  </div>
+
+
+<div class="container_narrow">
+  <img src="4.jpg" class="container_img">
+ </div>
+  
+<!-- END PAGE BAR-->
+<div class=container_bar>
+  <a href="https://www.facebook.com/banditgarage" class="fa fa-facebook"></a>
+  <a href="http://instagram.com/banditgarageportugal" class="fa fa-instagram"></a>
+  <a href="https://www.pinterest.com/banditgarage/" class="fa fa-pinterest"></a>
+  <a href="mailto:banditgarageportugal@gmail.com" class="fa fa-envelope"></a>
+  </div>
+  
+  
+</div> 
+<!-- SCRIPT SLIDE SHOW-->    
+<script>
+      var slideIndex = 0;
+      showSlides();
+      
+      function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}    
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+        setTimeout(showSlides, 5000); // Change image every 2 seconds
+      }
+      </script>
+
+</body>
+</html>
